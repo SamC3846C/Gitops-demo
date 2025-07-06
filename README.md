@@ -31,6 +31,8 @@ Now open your browser:
 ------------------------------------------------------------
 kubectl get secret argocd-initial-admin-secret -n argocd -ojsonpath="{.data.password}" | base64 -d
 
+Initial username is always admin 
+
 
 
 
