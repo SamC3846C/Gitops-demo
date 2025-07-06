@@ -12,13 +12,15 @@ A repo for understanding Gitops better for today and tomorrow
 
 ----> A GitHub account with a repo for storing your manifests
 
-#🧱 Step 1: Install Argo CD in Minikube
+🧱 Step 1: Install Argo CD in Minikube
+-------------------------------------------------------
 
 kubectl create namespace argocd
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-#🔐 Step 2: Access Argo CD UI (via port-forward) 
+🔐 Step 2: Access Argo CD UI (via port-forward) 
+-----------------------------------------------------------
 
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 Now open your browser:
@@ -26,6 +28,7 @@ Now open your browser:
 
 
 🔑 Login Credentials
+------------------------------------------------------------
 kubectl get secret argocd-initial-admin-secret -n argocd -ojsonpath="{.data.password}" | base64 -d
 
 
