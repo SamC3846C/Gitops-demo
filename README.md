@@ -53,5 +53,23 @@ Namespace: default
 Hit Create → Sync
 
 
+🧪 Step 5: Make a GitOps Change
+----------------------------------------------------------------
+Go to your repo, edit nginx.yaml, and change:
+
+Edit
+replicas: 1 → replicas: 2
+Commit and push it.
+
+Now go to Argo CD UI — you’ll see:
+
+App is OutOfSync / Refresh if you can't see the changes 
+
+Hit “Sync”, or it can be automatic if enabled
+
+Once synced, your deployment will be updated! 
+
+
+
 
 
