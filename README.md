@@ -33,6 +33,25 @@ kubectl get secret argocd-initial-admin-secret -n argocd -ojsonpath="{.data.pass
 
 Initial username is always admin 
 
+Using Web UI of the Argo-CD 
+-------------------------------------------------------------------------------
+Click “New App”
+
+Fill in:
+--------------------------------
+
+App Name: nginx-app
+
+Repo URL: your GitHub repo
+
+Path: . (root)
+
+Cluster: in-cluster
+
+Namespace: default
+
+Hit Create → Sync
+
 
 
 
